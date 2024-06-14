@@ -1,0 +1,41 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "description": "Проект Diet-Microservice представляет собой микросервисное приложение для составления диетических планов с использованием искусственного интеллекта. Приложение разработано с использованием современных технологий и архитектурных решений.",
+  "main": "gatewayService.js",
+  "scripts": {
+    "start": "concurrently \"node gatewayService.js\" \"node mc-auth/authController.js\" \"node mc-chado/chadoController.js\" \"node mc-perplexity/perplexityController.js\"",
+    "dev": "concurrently \"nodemon gatewayService.js\" \"nodemon mc-auth/authController.js\" \"nodemon mc-chado/chadoController.js\" \"nodemon mc-perplexity/perplexityController.js\"",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "http-proxy": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-as-promised": "^7.1.1",
+    "concurrently": "^8.2.2",
+    "jest": "^29.7.0",
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.0",
+    "supertest": "^6.3.3"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
