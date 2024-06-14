@@ -1,4 +1,4 @@
-# Diet-Microservice
+# NutricoreAI 
 
 ## Общее описание проекта
 
